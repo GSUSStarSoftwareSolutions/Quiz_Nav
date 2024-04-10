@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/main.dart';
 import 'package:quiz/models1/ques.dart';
 
 class Results extends StatelessWidget {
@@ -72,8 +73,11 @@ class Results extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  // Restart quiz
-                  Navigator.pop(context);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MyApp(),
+                      ));
                 },
                 child:
                     Text('Restart quiz', style: TextStyle(color: Colors.black)),
